@@ -2,7 +2,7 @@
 
 Static portfolio website for Felix Adriel A. Hate. Open `index.html` in a browser or serve this directory with a static HTTP server. No build step is required.
 
-The downloadable `Felix-Adriel-Hate-Resume.pdf` and `Felix-Adriel-Hate-Resume.docx` contain the updated resume and selected projects. They use the corrected `Felix_Adriel_Hate_Resume` sources supplied by the user. The original files are preserved. `Felix-Adriel-Hate-Portfolio.docx` is a compatibility copy of the corrected Word resume.
+The downloadable `Felix-Adriel-Hate-Resume.pdf` and `Felix-Adriel-Hate-Resume-October-2026.docx` contain the updated resume and selected projects. They use the corrected `Felix_Adriel_Hate_Resume` sources supplied by the user. The original files are preserved. `Felix-Adriel-Hate-Portfolio.docx` is a compatibility copy of the corrected Word resume.
 
 ## October 2026 update
 
@@ -25,3 +25,7 @@ The site is published from this Git repository through its connected hosting pro
 The site now uses `index.html`, `styles.css` and `script.js`, with no build step or external font dependency. Three detailed projects lead the page, followed by a filterable archive containing the remaining seven projects. Native disclosures work without JavaScript. Experience, technical focus, credentials and contact sections use a restrained neutral and green design.
 
 See [design research and validation](DESIGN.md) for references and the reasoning behind the layout. Browser checks passed at 320, 375, 768, 1024 and 1440 pixels, including expanded project details, keyboard controls, filters, reduced motion, no-JavaScript content and HTTP resume downloads.
+
+## Saylor credentials
+
+Added CS205 Building with Artificial Intelligence (Oct 7, 2026), CS402 Computer Communications and Networks (Oct 15, 2026), and CS406 Information Security (Oct 16, 2026), with certificate links on the website. The PDF and updated Word download include these credentials. The October 2026 Word file is the current website download; the older Word file is retained because it was locked during this update. The PDF remains one page and was visually checked; Word pagination remains unverified because local document rendering is unavailable.
