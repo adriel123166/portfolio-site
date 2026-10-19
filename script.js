@@ -13,20 +13,44 @@ for (const button of filterButtons) {
     filterStatus.textContent = `${count} additional projects shown.`;
   });
 }
-// All content and disclosures remain accessible without JavaScript.
-if ('IntersectionObserver' in window) {
-  const links = [...document.querySelectorAll('nav a')];
-  const observer = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      for (const link of links) {
-        if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      }
-    }
-  }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 });
-  for (const link of links) {
-    const section = document.querySelector(link.hash);
-    if (section) observer.observe(section);
+// Track the section nearest the reading position, including short sections.
+const navigationLinks = [...document.querySelectorAll('nav a')];
+const sections = navigationLinks.map(link => document.querySelector(link.hash));
+let navigationFrame;
+function updateNavigation() {
+  navigationFrame = undefined;
+  const readingLine = window.innerHeight * .3;
+  let active = sections[0];
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= readingLine) active = section;
+  }
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8) active = sections.at(-1);
+  for (const link of navigationLinks) {
+    if (link.hash === `#${active.id}`) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
   }
 }
+function requestNavigationUpdate() {
+  if (navigationFrame === undefined) navigationFrame = requestAnimationFrame(updateNavigation);
+}
+window.addEventListener('scroll', requestNavigationUpdate, { passive: true });
+window.addEventListener('resize', requestNavigationUpdate);
+window.addEventListener('hashchange', requestNavigationUpdate);
+document.addEventListener('toggle', requestNavigationUpdate, true);
+updateNavigation();
+// A subtle spotlight for desktop pointers; respect reduced-motion preferences.
+const pointerEnabled = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+let pointerFrame;
+let pointerX = 0;
+let pointerY = 0;
+window.addEventListener('pointermove', event => {
+  if (!pointerEnabled.matches) return;
+  pointerX = event.clientX;
+  pointerY = event.clientY;
+  if (pointerFrame !== undefined) return;
+  pointerFrame = requestAnimationFrame(() => {
+    document.documentElement.style.setProperty('--pointer-x', `${pointerX}px`);
+    document.documentElement.style.setProperty('--pointer-y', `${pointerY}px`);
+    pointerFrame = undefined;
+  });
+}, { passive: true });

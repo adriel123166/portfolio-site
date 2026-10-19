@@ -22,10 +22,16 @@ The site is published from this Git repository through its connected hosting pro
 
 ## Professional redesign
 
-The site now uses `index.html`, `styles.css` and `script.js`, with no build step or external font dependency. Three detailed projects lead the page, followed by a filterable archive containing the remaining seven projects. Native disclosures work without JavaScript. Experience, technical focus, credentials and contact sections use a restrained neutral and green design.
+The site now uses `index.html`, `styles.css` and `script.js`, with no build step or external font dependency. Three detailed projects lead the page, followed by a filterable archive containing the remaining seven projects. Native disclosures work without JavaScript. Experience, technical focus, credentials and contact sections use a dark navy, slate and teal design.
 
 See [design research and validation](DESIGN.md) for references and the reasoning behind the layout. Browser checks passed at 320, 375, 768, 1024 and 1440 pixels, including expanded project details, keyboard controls, filters, reduced motion, no-JavaScript content and HTTP resume downloads.
 
 ## Saylor credentials
 
 Added CS205 Building with Artificial Intelligence (Oct 7, 2026), CS402 Computer Communications and Networks (Oct 15, 2026), and CS406 Information Security (Oct 16, 2026), with certificate links on the website. The PDF and updated Word download include these credentials. The October 2026 Word file is the current website download; the older Word file is retained because it was locked during this update. The PDF remains one page and was visually checked; Word pagination remains unverified because local document rendering is unavailable.
+
+## October 19 split-layout redesign
+
+Adapted the theme and layout of Brittany Chiang's portfolio (https://brittanychiang.com/) with an original HTML/CSS/JavaScript implementation and visible inspiration credit. The desktop identity sidebar stays in place while About, Experience, Projects, Credentials and Contact scroll alongside it. Mobile uses a single column with sticky section labels. Includes active navigation, restrained hover cards, teal technology tags and a desktop pointer glow that respects reduced-motion preferences.
+
+All ten project disclosures, archive filters, seven credentials and current resume downloads are retained. The ISC2 CC exam is described as scheduled for November 16, 2026, not as an earned certification. Validation covered keyboard disclosures, filters, internal links, download delivery, no-JavaScript content, reduced motion, active navigation and 320/375/768/1024/1440px layouts.

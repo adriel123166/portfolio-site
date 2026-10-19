@@ -1,26 +1,21 @@
-# Portfolio design research
+# Portfolio design
 
-Reviewed October 16, 2026. These references informed the redesign; they are examples and guidance, not evidence that a particular visual treatment guarantees hiring results.
+Updated October 19, 2026.
 
-## References and observations
+## Reference
 
-- [Brittany Chiang](https://brittanychiang.com/): an immediate role statement, clear experience history, project descriptions and technology labels, with a readily available resume. Adapted the emphasis on specific contributions and readable project context.
-- [Lee Robinson](https://leerob.com/): a concise identity and biography followed by selected writing. Adapted the direct introduction and restrained information hierarchy.
-- [Josh W Comeau](https://www.joshwcomeau.com/): technical content with descriptive introductions and category navigation. Adapted the use of useful visual explanations rather than decorative motion.
-- [NN/g portfolio guidance](https://www.nngroup.com/articles/ux-design-portfolios/): recommends selecting a few relevant projects and explaining their problems, contributions and constraints. The article concerns UX portfolios; applying that structure to cloud and security projects is a design judgment for this site.
-- [NN/g credibility research](https://www.nngroup.com/articles/trustworthy-design/): discusses organized navigation, appropriate design, current content and transparent information as credibility factors. Applied through clear labels and explicit prototype status.
-- [web.dev responsive design guidance](https://web.dev/articles/new-responsive): highlights responsiveness to user preferences, including reduced motion. Applied through responsive layouts and reduced-motion behavior.
+The user requested the theme and layout of [Brittany Chiang's portfolio](https://brittanychiang.com/). The live site was reviewed for its desktop split layout, dark navy palette, slate typography, teal accents, navigation indicators, project rows and hover treatment. The implementation uses the user's own content and independently written HTML, CSS and JavaScript. Brittany's biography, employment history, projects, images and source code were not reused. The footer credits the design inspiration.
 
-## Implementation
+## Adaptation
 
-The site uses warm neutral backgrounds, dark green accents, system typography and a consistent spacing scale. A project architecture overview makes the cloud focus concrete. All visuals are HTML, CSS or SVG; no stock imagery, generated project screenshots or external font downloads are required.
-
-Three projects lead the page: Neubie for cloud work, the JWT assessment for security, and the hall reservation system for application integration. Their details explain problems, contributions and scope. Seven additional projects remain available in an expandable, filterable archive.
-
-Experience, technical focus, education and Oracle credentials have distinct sections. Contact links and the existing one-page PDF and Word resume downloads remain available. Existing project facts and prototype limitations are preserved; no new certifications, employment dates or outcomes were invented.
+- A sticky identity sidebar contains Felix's introduction, in-page navigation, resume download and professional links.
+- The scrolling column contains About, Experience, Projects, Learning and Credentials, and Contact.
+- Mobile and tablet screens use a single column with sticky section headings and a compact navigation row.
+- Three compact project illustrations describe the user's cloud, JWT assessment and reservation work. Seven additional projects retain native disclosures and filtering.
+- Credentials retain verified course titles, dates and certificate links. ISC2 CC is described as a scheduled exam rather than an earned credential.
+- Hover and keyboard focus receive matching card treatments. The cursor glow is limited to desktop pointers and disabled for reduced motion. Navigation follows the current reading position.
+- System fonts avoid external font requests. The site has no framework, build step or runtime dependency.
 
 ## Verification
 
-Checked HTTP delivery of the page assets and both resume files. Browser checks covered all ten native project disclosures, keyboard use, archive filter results and accessible state, internal anchors, and page overflow at 320, 375, 768, 1024 and 1440 pixels with details both closed and expanded. Also checked reduced motion, content and disclosures with JavaScript disabled, and JavaScript runtime errors.
-
-Desktop and mobile screenshots were visually reviewed. Production deployment status should be verified with the hosting provider after publication.
+Browser checks passed at 320, 375, 768, 1024 and 1440 pixels, with project details both open and closed. Checks covered ten keyboard disclosures, archive counts and accessible filter state, internal anchors, current PDF and Word downloads, seven credentials and three Saylor certificate links, active navigation, desktop sidebar position, stacked mobile layout, reduced motion, content without JavaScript, and runtime errors. Desktop and mobile screenshots were inspected for layout and readability.
