@@ -16,6 +16,12 @@ The user requested the theme and layout of [Brittany Chiang's portfolio](https:/
 - Hover and keyboard focus receive matching card treatments. The cursor glow is limited to desktop pointers and disabled for reduced motion. Navigation follows the current reading position.
 - System fonts avoid external font requests. The site has no framework, build step or runtime dependency.
 
+## Motion update October 20
+
+The supplied short video primarily showcases layered hero layouts, product depth and colored backlighting. The portfolio adapts that visual language through slow blue/teal ambient lighting, a soft introduction halo, a staggered entrance, one-time scroll reveals, and small project-illustration tilt and sheen effects. The existing split layout and project facts remain intact. No third-party video, product image or creator branding is embedded.
+
+Motion is a progressive enhancement in `motion.css` and `script.js`. Content remains available without JavaScript. Keyboard focus reveals its destination immediately. A visible pause/resume control disables motion, while operating-system reduced-motion preferences disable effects automatically and are honored when changed during the session. Continuous ambient motion is disabled on small screens, and hover tilt is limited to desktop pointers.
+
 ## Verification
 
-Browser checks passed at 320, 375, 768, 1024 and 1440 pixels, with project details both open and closed. Checks covered ten keyboard disclosures, archive counts and accessible filter state, internal anchors, current PDF and Word downloads, seven credentials and three Saylor certificate links, active navigation, desktop sidebar position, stacked mobile layout, reduced motion, content without JavaScript, and runtime errors. Desktop and mobile screenshots were inspected for layout and readability.
+Browser checks passed at 320, 375, 768, 1024 and 1440 pixels, with project details both open and closed. Checks covered ten keyboard disclosures, archive counts and accessible filter state, internal anchors, current PDF and Word downloads, seven credentials and three Saylor certificate links, active navigation, desktop sidebar position, stacked mobile layout, reduced motion, content without JavaScript, and runtime errors. Motion checks also exercised reveals, pause/resume, illustration tilt and reduced-motion changes during the session. Desktop and mobile screenshots were inspected for layout and readability.

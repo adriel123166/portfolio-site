@@ -1,5 +1,7 @@
 # Felix Adriel portfolio
 
+October 20 motion update: video-inspired ambient lighting, introduction and scroll reveals, and illustration depth are implemented in `motion.css` and `script.js`. A Pause motion control and automatic reduced-motion handling keep the content accessible. The reference video is not included in the public site.
+
 Static portfolio website for Felix Adriel A. Hate. Open `index.html` in a browser or serve this directory with a static HTTP server. No build step is required.
 
 The downloadable `Felix-Adriel-Hate-Resume.pdf` and `Felix-Adriel-Hate-Resume-October-2026.docx` contain the updated resume and selected projects. They use the corrected `Felix_Adriel_Hate_Resume` sources supplied by the user. The original files are preserved. `Felix-Adriel-Hate-Portfolio.docx` is a compatibility copy of the corrected Word resume.
