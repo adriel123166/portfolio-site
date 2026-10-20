@@ -1,5 +1,13 @@
 # Felix Adriel portfolio
 
+## October 20 project evidence update
+
+Featured projects link to three static case studies in `projects/`. Neubie has an original architecture diagram and a locally captured widget preview; the hall project has a local build screenshot with sample state. The JWT diagram describes assessment scope rather than reproducing an unavailable report. Captions distinguish mock data, disconnected services and pending deployment. The public Neubie team repository is linked with a snapshot limitation.
+
+`refinements.css` increases small text and touch targets while preserving the existing theme and motion controls. Four Oracle credentials sit in a native disclosure; all seven credentials and certificate links remain available without JavaScript. The SSS experience includes the owner's confirmed cable tone tracing, device setup, connectivity troubleshooting and patch panel installation.
+
+Browser checks cover the home page and case studies at 320, 375 and 1440 pixels, decoded evidence images, keyboard disclosures, filters, no-JavaScript behavior, reduced motion and pause/resume. Evidence screenshots use WebP and diagrams use SVG; the reference video and private project sources are not published.
+
 October 20 motion update: video-inspired ambient lighting, introduction and scroll reveals, and illustration depth are implemented in `motion.css` and `script.js`. A Pause motion control and automatic reduced-motion handling keep the content accessible. The reference video is not included in the public site.
 
 Static portfolio website for Felix Adriel A. Hate. Open `index.html` in a browser or serve this directory with a static HTTP server. No build step is required.

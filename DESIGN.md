@@ -25,3 +25,10 @@ Motion is a progressive enhancement in `motion.css` and `script.js`. Content rem
 ## Verification
 
 Browser checks passed at 320, 375, 768, 1024 and 1440 pixels, with project details both open and closed. Checks covered ten keyboard disclosures, archive counts and accessible filter state, internal anchors, current PDF and Word downloads, seven credentials and three Saylor certificate links, active navigation, desktop sidebar position, stacked mobile layout, reduced motion, content without JavaScript, and runtime errors. Motion checks also exercised reveals, pause/resume, illustration tilt and reduced-motion changes during the session. Desktop and mobile screenshots were inspected for layout and readability.
+# October 20 evidence and readability refinements
+
+Kept the established navy/slate/teal theme and sticky identity column. Replaced decorative thumbnails with labeled architecture/scope diagrams and actual local interface captures. Three dedicated case studies explain the problem, contribution, technical choices and limitations. They avoid invented project metrics and distinguish interface evidence from live service validation.
+
+Increased navigation, tags and metadata toward 12–14px; mobile navigation, filters and disclosures have at least 44px target heights. Older Oracle credentials use a keyboard-accessible native disclosure to reduce page length. All content remains available without JavaScript. Motion keeps its existing pause and reduced-motion behavior.
+
+Research informing the refinement: [NN/g portfolio guidance](https://www.nngroup.com/articles/ux-design-portfolios/), adapted from a UX audience to technical case studies; [W3C target-size guidance](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html); and [Core Web Vitals](https://web.dev/articles/vitals). Local lab measurements are separate from production field data and cannot establish a real-user Core Web Vitals pass.
