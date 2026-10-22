@@ -1,5 +1,15 @@
 # Felix Adriel portfolio
 
+## October 22 interactive portrait journey
+
+The homepage opens with a centered WebGL portrait and a continuous editorial page layout. The owner supplied `Meshy_AI_Desert_Cool_1022062334_texture.glb`; the site uses a copy at `assets/avatar/felix-meshy-sunglasses.glb` with embedded PBR textures. The rejected procedural cartoon has been removed from the public source. Opaque dark lens geometry fills the supplied glasses openings, with a dark tint that stays opaque from every angle. Studio lighting and automatic model sizing improve presentation without inventing new facial geometry. Meshy attribution and CC BY 4.0 are included in the footer. The original photo is not published.
+
+`journey.js` lazy-loads `portrait-scene.js` and the local, MIT-licensed Three.js 0.186.1 modules. Drag, arrow keys and buttons rotate the model. Optional automatic rotation stops with the site motion control or reduced-motion preference. Rendering runs on demand and stops offscreen or in a hidden tab; pixel ratio is capped at 1.5. A WebP capture of the avatar remains available without WebGL or JavaScript and after context loss.
+
+`journey.css` replaces the sticky sidebar homepage with a wide hero, desktop scroll progression, text reveals, scroll-highlighted words, small magnetic CTAs, spacious project sections and an animated closing heading. Touch scroll remains native; mobile and reduced-motion layouts do not pin the hero. Existing case studies, archive filters, credentials and resume downloads are retained. These are native adaptations of Vengeance UI and Sibol patterns, without migrating the static site to React.
+
+Validation is recorded in DESIGN.md. Earlier Lighthouse scores below apply to the previous design, not this 3D update.
+
 ## October 20 project evidence update
 
 Featured projects link to three static case studies in `projects/`. Neubie has an original architecture diagram and a locally captured widget preview; the hall project has a local build screenshot with sample state. The JWT diagram describes assessment scope rather than reproducing an unavailable report. Captions distinguish mock data, disconnected services and pending deployment. The public Neubie team repository is linked with a snapshot limitation.
