@@ -1,11 +1,13 @@
 // Native equivalents of Sibol ScrollWords / GrowthLine / Magnetic and Vengeance's
 // gooey heading reveal. No global smooth-scroll engine; anchors remain native.
 const hero=document.querySelector('.hero-journey');
-const stage=document.querySelector('.portrait-stage');
+import { mountSignalField } from './signal-field.js';
+const stage=document.querySelector('.signal-stage');
 const preference=matchMedia('(prefers-reduced-motion: reduce)');
 const root=document.documentElement;
 const enabled=()=>!preference.matches&&!root.classList.contains('motion-paused');
-let frame=0,disposeScene;
+let frame=0;
+const disposeScene=mountSignalField(stage);
 let chapterIndex=-1;
 const headings=[...document.querySelectorAll('.gooey-heading')];
 const headingObserver=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('heading-revealed');headingObserver.unobserve(e.target);}},{threshold:.15});
@@ -17,9 +19,9 @@ function update(){
  const max=root.scrollHeight-innerHeight;
  root.style.setProperty('--journey-progress',String(max>0?scrollY/max:0));
  const box=hero.getBoundingClientRect(),distance=box.height-innerHeight;
- const progress=distance>0?Math.max(0,Math.min(1,-box.top/distance)):0;
+ const progress=Math.max(0,Math.min(1,-box.top/Math.max(innerHeight,box.height)));
  hero.style.setProperty('--hero-scroll',String(enabled()?progress:0));
- stage.dataset.scroll=String(enabled()?progress:0);stage.dispatchEvent(new Event('portrait-scroll'));
+ stage.dataset.scroll=String(enabled()?progress:0);stage.dispatchEvent(new Event('signal-scroll'));
  const chapter=document.querySelector('.hero-chapter');
  const index=Math.min(2,Math.floor(progress*3));
  const labels=['Cloud applications','Authentication security','Connected systems'];
@@ -38,13 +40,11 @@ for(const cta of document.querySelectorAll('.magnetic-cta')){
  cta.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||!enabled())return;const b=cta.getBoundingClientRect();cta.style.transform=`translate(${(e.clientX-b.left-b.width/2)*.07}px,${(e.clientY-b.top-b.height/2)*.09}px)`;},{passive:true});
  cta.addEventListener('pointerleave',()=>cta.style.transform='');cta.addEventListener('blur',()=>cta.style.transform='');
 }
-// Only request the renderer when the portrait approaches the viewport.
-const loader=new IntersectionObserver(async entries=>{
- if(!entries.some(e=>e.isIntersecting))return;loader.disconnect();
- try{const {mountPortrait}=await import('./portrait-scene.js');disposeScene=await mountPortrait(stage);}
- catch{stage.querySelector('.portrait-status').textContent='Portrait preview · 3D could not load';}
-},{rootMargin:'200px'});loader.observe(stage);
+// Local project spotlight follows fine-pointer movement without moving content.
+for(const card of document.querySelectorAll('.project-feature')){
+ card.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||!enabled())return;const box=card.getBoundingClientRect();card.style.setProperty('--card-x',`${e.clientX-box.left}px`);card.style.setProperty('--card-y',`${e.clientY-box.top}px`);},{passive:true});
+}
 // Keep heading content visible when navigating directly with keyboard or anchors.
 document.addEventListener('focusin',e=>e.target.closest('section')?.querySelectorAll('.gooey-heading').forEach(h=>h.classList.add('heading-revealed')));
-window.addEventListener('pagehide',e=>{if(e.persisted)return;disposeScene?.();loader.disconnect();headingObserver.disconnect();motionObserver.disconnect();cancelAnimationFrame(frame);},{once:true});
+window.addEventListener('pagehide',e=>{if(e.persisted)return;disposeScene?.();headingObserver.disconnect();motionObserver.disconnect();cancelAnimationFrame(frame);},{once:true});
 update();

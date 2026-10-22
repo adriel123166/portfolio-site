@@ -1,14 +1,14 @@
 # Felix Adriel portfolio
 
-## October 22 interactive portrait journey
+## October 22 motion-led homepage
 
-The homepage opens with a centered WebGL portrait and a continuous editorial page layout. The owner supplied `Meshy_AI_Desert_Cool_1022062334_texture.glb`; the site uses a copy at `assets/avatar/felix-meshy-sunglasses.glb` with embedded PBR textures. The rejected procedural cartoon has been removed from the public source. Opaque dark lens geometry fills the supplied glasses openings, with a dark tint that stays opaque from every angle. Studio lighting and automatic model sizing improve presentation without inventing new facial geometry. Meshy attribution and CC BY 4.0 are included in the footer. The original photo is not published.
+Removed the portrait from the homepage at the owner's request. The current hero uses a lightweight Canvas2D signal field, moving connection pulses, pointer response and three focus modes (Cloud, Security, Networking). It replaces the static model composition with a two-column identity introduction, masked name entrance, magnetic CTA, slow technology ribbon and project hover spotlights. The document retains native scrolling, case studies, filters, seven credentials and resume downloads.
 
-`journey.js` lazy-loads `portrait-scene.js` and the local, MIT-licensed Three.js 0.186.1 modules. Drag, arrow keys and buttons rotate the model. Optional automatic rotation stops with the site motion control or reduced-motion preference. Rendering runs on demand and stops offscreen or in a hidden tab; pixel ratio is capped at 1.5. A WebP capture of the avatar remains available without WebGL or JavaScript and after context loss.
+`signal-field.js` owns the canvas lifecycle; `signal.css` styles the new hero and motion. No portrait, GLB, Three.js or other WebGL module is requested by the homepage. Previously supplied/corrected model files and the unused portrait source remain archived for reuse; they are not part of the interface. The original photo is not published.
 
-`journey.css` replaces the sticky sidebar homepage with a wide hero, desktop scroll progression, text reveals, scroll-highlighted words, small magnetic CTAs, spacious project sections and an animated closing heading. Touch scroll remains native; mobile and reduced-motion layouts do not pin the hero. Existing case studies, archive filters, credentials and resume downloads are retained. These are native adaptations of Vengeance UI and Sibol patterns, without migrating the static site to React.
+Motion stops when paused, when reduced motion is requested, while offscreen or while the tab is hidden. A static field fallback and ordinary page content remain available without JavaScript. The three focus modes work by keyboard, update a live caption and communicate selection with aria-pressed. Touch scrolling remains native.
 
-Validation is recorded in DESIGN.md. Earlier Lighthouse scores below apply to the previous design, not this 3D update.
+Browser verification passed at 320, 375, 768, 1024 and 1440 pixels, including expanded disclosures, mode selection, pause/reduced motion, offscreen suspension, no-JavaScript fallback, archive counts and retained credentials. Earlier Lighthouse scores below apply to the preceding design, not this update.
 
 ## October 20 project evidence update
 

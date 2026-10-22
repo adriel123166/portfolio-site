@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="motion.css">
   <link rel="stylesheet" href="refinements.css">
   <link rel="stylesheet" href="journey.css">
+  <link rel="stylesheet" href="signal.css">
   <script type="module" src="journey.js"></script>
   <script src="script.js" defer></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -34,26 +35,29 @@
     <main id="main">
       <section class="hero-journey" aria-labelledby="hero-title">
         <div class="hero-pin">
-          <div class="hero-grid" aria-hidden="true"></div><div class="hero-orbit" aria-hidden="true"></div>
-          <h1 class="hero-heading" id="hero-title"><span>Felix Adriel</span><span class="hero-surname">Hate</span></h1>
+          <div class="hero-grid" aria-hidden="true"></div>
           <div class="hero-layout">
-            <div class="hero-copy"><p class="eyebrow">Cloud · Security · Networking</p><h2>Built with curiosity.<br>Grounded in practice.</h2><p>I build cloud-connected applications, explore authentication security and learn how networks work in the real world.</p><a class="hero-cta magnetic-cta" href="#work">Explore my work <span aria-hidden="true">↗</span></a></div>
-            <div class="portrait-stage">
-              <div class="portrait-viewer" role="group" tabindex="-1" aria-label="Interactive 3D portrait of Felix Adriel Hate" aria-describedby="portrait-help">
-                <img class="portrait-poster" src="assets/avatar/portrait-poster.webp" width="534" height="620" alt="Textured 3D portrait of Felix wearing dark sunglasses, a light blue shirt and cream trousers" fetchpriority="high">
-                <canvas class="portrait-canvas" aria-hidden="true"></canvas>
-              </div>
-              <p class="portrait-status" id="portrait-help" role="status">Portrait preview · Loading interactive view</p>
-              <div class="portrait-controls" role="group" aria-label="Portrait controls" hidden>
-                <button type="button" data-action="left" aria-label="Rotate portrait left">←</button><button type="button" data-action="reset">Reset</button><button type="button" data-action="auto" aria-pressed="false">Auto rotate</button><button type="button" data-action="right" aria-label="Rotate portrait right">→</button>
-              </div>
-              <noscript><p class="portrait-status nojs-status">Portrait preview · Enable JavaScript for rotation</p></noscript>
+            <div class="hero-copy">
+              <p class="eyebrow">Networking Intern · SSS Main Branch</p>
+              <h1 class="hero-heading" id="hero-title"><span class="name-line"><span>Felix Adriel</span></span><span class="name-line name-accent"><span>Hate.</span></span></h1>
+              <h2>Cloud-connected work.<br>Security-minded thinking.</h2>
+              <p>I’m a BSIT student building AWS applications, exploring authentication security and gaining hands-on networking experience.</p>
+              <div class="hero-actions"><a class="hero-cta magnetic-cta" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="Felix-Adriel-Hate-Resume.pdf" download>Download resume <span aria-hidden="true">↓</span></a></div>
+              <p class="hero-location">Quezon City, Philippines · New Era University</p>
             </div>
-            <aside class="hero-aside" aria-label="Current role and location"><p class="eyebrow">Currently</p><div><h2>Networking Intern</h2><p>SSS Main Branch<br>Since October 2026</p></div><div><h2>BS Information Technology</h2><p>New Era University<br>Class of 2027 · Expected</p></div><p class="hero-coordinate">Based in Quezon City, PH ↗</p></aside>
+            <figure class="signal-stage" aria-label="Explore my technical focus">
+              <span class="signal-kicker">Connected by curiosity</span>
+              <canvas class="signal-canvas" aria-hidden="true"></canvas>
+              <div class="signal-fallback" aria-hidden="true">FA</div>
+              <span class="signal-hint" aria-hidden="true">Move to explore · Tap to send a signal</span>
+              <div class="signal-modes" role="group" aria-label="Explore focus areas"><button type="button" data-focus-mode="0" aria-pressed="true">Cloud</button><button type="button" data-focus-mode="1" aria-pressed="false">Security</button><button type="button" data-focus-mode="2" aria-pressed="false">Networking</button></div>
+              <figcaption class="signal-caption" role="status" aria-live="polite">AWS applications and serverless workflows.</figcaption>
+            </figure>
           </div>
           <div class="hero-bottom"><a href="#about">Scroll to discover <span aria-hidden="true">↓</span></a><p class="hero-chapter"><strong>01</strong> / Cloud applications</p><span>Open to opportunities</span></div>
         </div>
       </section>
+      <div class="technology-ribbon" aria-hidden="true"><div class="ribbon-track"><div class="ribbon-group"><span>AWS</span><span>Python</span><span>Application security</span><span>React</span><span>REST APIs</span><span>Network fundamentals</span></div><div class="ribbon-group"><span>AWS</span><span>Python</span><span>Application security</span><span>React</span><span>REST APIs</span><span>Network fundamentals</span></div></div></div>
 
       <section id="about" class="content-section about-section" aria-labelledby="about-title">
         <p class="chapter-label">01 / The introduction</p><h2 class="section-title gooey-heading" id="about-title">A little about me.</h2>
@@ -127,7 +131,7 @@
         <ul class="footer-socials"><li><a href="https://github.com/adriel123166" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li><li><a href="https://www.linkedin.com/in/hate-felix-adriel/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li></ul>
       </section>
       <div class="footer-signature" aria-hidden="true"><span class="gooey-heading">Stay curious.</span></div>
-      <footer><p>Original portfolio with motion inspired by <a href="https://www.vengenceui.com/" target="_blank" rel="noopener noreferrer">Vengeance UI</a> and Sibol House; earlier layout inspired by <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang</a>. Built with Three.js, HTML, CSS and JavaScript. 3D portrait generated with <a href="https://www.meshy.ai/" target="_blank" rel="noopener noreferrer">Meshy</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>); sunglasses and lighting adapted.</p><p>© 2026 Felix Adriel A. Hate <span aria-hidden="true">·</span> <a href="#home">Back to top ↑</a></p></footer>
+      <footer><p>Original portfolio with motion inspired by <a href="https://www.vengenceui.com/" target="_blank" rel="noopener noreferrer">Vengeance UI</a> and Sibol House; earlier layout inspired by <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang</a>. Built with HTML, CSS, Canvas and JavaScript.</p><p>© 2026 Felix Adriel A. Hate <span aria-hidden="true">·</span> <a href="#home">Back to top ↑</a></p></footer>
     </main>
   </div>
 </body>
